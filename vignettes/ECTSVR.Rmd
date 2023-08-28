@@ -1,0 +1,33 @@
+---
+title: "ECTSVR"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ECTSVR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction
+
+\*\*\*\*<br/> *The cointegration based support vector regression model is a combination of error correction model and support vector regression (<http://krishi.icar.gov.in/jspui/handle/123456789/72361>). This hybrid model allows the researcher to make use of the information extracted by the cointegrating vector as an input in the support vector regression model.*
+
+\*\*\*\*<br/>
+
+```{r setup}
+# Examples: How The cointegration based support vector regression model can be applied  
+library(ECTSVR)
+#taking data finland from the r library
+data(finland)
+#takaing the two cointegrated variables (4th and 3rd) from the data set
+data_example <- finland[,4:3]
+#application of ECTSVR model with radial basis kernel function of Epsilon support vector regression model
+
+ECTSVR(data_example,"trace",0.8,2, "radial","eps-regression",verbose = FALSE)
+```
