@@ -1,18 +1,19 @@
 Package: ECTSVR
-Type: Package
-Title: Cointegration Based Support Vector Regression Model
-Version: 0.1.0
-Author: Pankaj Das [aut, cre] (<https://orcid.org/0000-0003-1672-2502>)
-Maintainer: Pankaj Das <pankaj.das2@icar.gov.in>
-Depends: R (>= 3.3.0),urca,vars,WeightSVM
-Description: The cointegration based support vector regression model enables researchers to use data obtained from the cointegrating vector as input in the support vector regression model.
-Encoding: UTF-8
-License: MIT + file LICENSE
-NeedsCompilation: no
-Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
+Title: Error Correction Term Based Support Vector Regression for Time
+        Series
+Version: 0.2.0
+Authors@R: person("Pankaj", "Das", email = "pankaj.iasri@gmail.com", role = c("aut", "cre"),comment = c(ORCID = "0000-0003-1672-2502"))
+Maintainer: Pankaj Das <pankaj.iasri@gmail.com>
+Description: The cointegration based support vector regression model is a combination of error correction model and support vector regression. This hybrid model allows the researcher to make use of the information extracted by the cointegrating vector as an input in the support vector regression mode. Implements the models with multiple kernel functions (linear, polynomial, radial, sigmoid) for time series forecasting. Includes stationarity tests, Johansen cointegration, and comprehensive model evaluation.
+Depends: R (>= 3.5.0)
+Imports: urca, tseries, e1071, caret, Metrics, knitr, stats, graphics
+Suggests: rmarkdown, testthat
 VignetteBuilder: knitr
-Config/testthat/edition: 3
+License: GPL-3
+Encoding: UTF-8
 RoxygenNote: 7.2.3
-Packaged: 2023-08-26 11:54:34 UTC; Pankaj
+NeedsCompilation: no
+Packaged: 2026-11-11 05:54:59 UTC; IASRI
+Author: Pankaj Das [aut, cre] (ORCID: <https://orcid.org/0000-0003-1672-2502>)
 Repository: CRAN
-Date/Publication: 2023-08-28 17:10:02 UTC
+Date/Publication: 2026-11-12 16:40:15 UTC

@@ -1,0 +1,39 @@
+---
+title: "Introduction to ECTSVR"
+author: "Pankaj Das"
+date: "`r Sys.Date()`"
+output: html_document
+vignette: >
+  %\VignetteIndexEntry{Introduction to ECTSVR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction
+
+\*\*\*\*<br/> *The cointegration based support vector regression model is a combination of error correction model and support vector regression (<https://doi.org/10.1007/s40009-026-02355-9>). This hybrid model allows the researcher to make use of the information extracted by the cointegrating vector as an input in the support vector regression model.*
+
+\*\*\*\*<br/>
+
+```{r setup}
+# Examples: How The cointegration based support vector regression model can be applied  
+library(ECTSVR)
+## Generate sample data
+set.seed(123)
+n <- 100
+oil <- cumsum(rnorm(n, 0, 1)) + 50
+fruit <- 2 * oil + rnorm(n, 0, 1) + 100
+
+# Run analysis (quiet, no plots)
+results <- run_ectsvr_analysis(fruit, oil, verbose = FALSE, plot_results = FALSE)
+
+# View best model
+print(results$best_model)
+```
